@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My experiment</title>
+        <script src="../static/lib/jspsych-6.0.1/jspsych.js"></script>
+        <link href="../static/lib/jspsych-6.0.1/css/jspsych.css" rel="stylesheet" type="text/css"></link>
+    </head>
+    <body></body>
+    <script>
+    var a =[1,2];
+    a.push([5,0]);
+    console.log(a);
+    function clone(o) {
+        return JSON.parse(JSON.stringify(o));
+    }
+
+    function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+    }
+
+    var dots_timeline = [{
+
+            background_color: "black",
+            aperture_type: 0,
+            aperture_height: 350,
+
+        },
+        {
+
+            background_color: "black",
+            aperture_type: 1,
+            aperture_height: 350,
+
+        },
+        {
+
+            background_color: "black",
+            aperture_type: 2,
+            aperture_height: 350,
+
+        },
+        {
+
+            background_color: "black",
+            aperture_type: 3,
+            aperture_height: 350,
+
+        },
+        {
+
+            background_color: "black",
+            aperture_type: 4,
+            aperture_height: 350,
+
+        },
+        {
+
+            background_color: "black",
+            aperture_type: 5,
+            aperture_height: 350,
+
+        }
+    ];
+
+    var dots_this_sub  = [];
+    for (var trial_index = 0; trial_index < 1; trial_index++){
+      var all_dots = clone(dots_timeline);
+      console.log (all_dots);
+
+      var dots_this = [];
+      var dots_next = [];
+      for (var word_index = 0; word_index < 3; word_index++) {
+
+        var dots_indexpre = getRandomInt(all_dots.length/2);// 0 or 1 or 2
+        var leftright     = getRandomInt(2); // 0 or 1
+        dots_index    = dots_indexpre + all_dots.length/2 * leftright;// 0,1,2,3,4 or 5
+        dots_this.push(all_dots[dots_index]);
+        if (dots_index < all_dots.length/2){
+          dots_next.push(all_dots[dots_indexpre + all_dots.length/2])
+        } else {
+          dots_next.push(all_dots[dots_indexpre])
+        };
+        all_dots.splice(dots_indexpre, 1);
+        all_dots.splice(dots_indexpre + all_dots.length/2,1);
+        };
+     dots_this = jsPsych.randomization.shuffle(dots_this);
+     dots_next = jsPsych.randomization.shuffle(dots_next);
+     console.log(dots_this);
+     console.log(dots_next);
+     dots_this_sub.push(dots_this);
+     dots_this_sub.push(dots_next);
+     console.log(dots_this_sub);
+   };
+   dots_this_sub = jsPsych.randomization.shuffle(dots_this_sub);
+   console.log(dots_this_sub)
+
+       // Start Experiment
+       jsPsych.init({
+      timeline: timeline
+    });
+
+    </script>
+</html>

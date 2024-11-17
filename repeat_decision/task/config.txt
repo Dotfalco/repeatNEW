@@ -1,0 +1,37 @@
+[HIT Configuration]
+title = Decision making task
+description = Make a series of decisions, and later, choose whether you want to revise your choices.
+amt_keywords = Psychology
+lifetime = 23
+us_only = true
+approve_requirement = 98
+require_master_workers = false
+contact_email_on_error = solwaylabexp@umd.edu
+ad_group = oc_dot_motion_revise_bonus
+browser_exclude_rule = mobile
+allow_repeats = false
+
+[Database Parameters]
+table_name = oc_dot_motion_revise_bonus
+
+[Server Parameters]
+host = bellatrix.umd.edu
+port = 5003
+cutoff_time = 60
+logfile = server.log
+loglevel = 2
+debug = false
+threads = auto
+adserver_revproxy_host = bellatrix.umd.edu
+adserver_revproxy_port = 5003
+
+[Task Parameters]
+experiment_code_version = 1.0
+num_conds = 1
+num_counters = 1
+
+[Shell Parameters]
+launch_in_sandbox_mode = true
+bonus_message = Thank you for participating in our study. The bonus was calculated proportional to the number of correct responses.
+use_psiturk_ad_server = true
+ad_location = false

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<!--
+The consent.html displays the text of your IRB-approved
+  consent form.  Even if you are not required to provide
+  a consent form, it is helpful to use this form to
+  describe what people can do if an error comes up, etc...
+
+-->
+
+<script>
+    var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = window.location.search.substring(1),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return typeof sParameterName[1] === undefined ? true : decodeURIComponent(sParameterName[1]);
+        }
+    }
+    return false;
+};
+
+var id = getUrlParameter('PROLIFIC_PID');
+var sid = getUrlParameter('SESSION_ID');
+var stid = getUrlParameter('STUDY_ID');
+var link_id = "/index?PROLIFIC_PID="+id+"&SESSION_ID="+sid+"&STUDY_ID="+stid
+var thank_id = "/thankyou"
+
+
+</script>
+
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Psychology Experiment - Informed Consent Form</title>
+        <link rel="stylesheet" href="/repeat_decision/static/css/bootstrap.min.css" type="text/css" />
+        <link rel="stylesheet" href="/repeat_decision/static/css/style.css" type="text/css" />
+        <script type="text/javascript">
+            function onexit() {
+              self.close(); // no harm, no foul here
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container-consent">
+            <div id="consent">
+                <h1>Purpose of the Study</h1>
+                <hr />
+                <div class="legal well">
+                    <p>This research is being conducted by Dr. Alec Solway at the University of Maryland, College Park.</p>
+                    <p>We are inviting you to participate in this research project because you are at least 18 years of age and fit the general criteria required to participate in this study. In some cases, you may have been invited on the basis of your responses to the questionnaires administered as part of the Department of Psychology’s ‘mass screening’ of students enrolled in Introductory Psychology (PSYC 101). </p>
+                    <p>The purpose of this research study is to investigate various cognitive processes (e.g., aspects of attention, learning, decision-making, and memory) and how these relate to beliefs, attitudes, and behaviors in daily life. One goal in particular is to better understand how differences in these dimensions may relate to certain moods and mental health, such as anxiety, obsessive-compulsive disorder (OCD), and depression.</p>
+                    <p>We use a combination of computational and mathematical models, behavioral experiments, and neuroimaging techniques (structural and functional MRI and EEG, which are different ways to measure the structure of your brain and brain activity), to test formal hypotheses about what happens in the brain when a person engages in a particular task. To test these models, we rely on data collected from everyone, including healthy individuals.</p>
+                    <p>Understanding these processes promises to clarify the psychological and neural basis of various psychiatric disorders, which are extremely common and cause considerable suffering, and may ultimately set the stage for developing better treatments and interventions.</p>
+                    <p>The link between your identity and your responses in the experiments will remain strictly confidential. You are free to opt-out of the study at any time, even after you begin.</p>
+                </div>
+
+                <h1>Procedures</h1>
+                <hr />
+                <div class="legal well">
+                    <p>Due to the nature of the study, participants are also required to be proficient in reading and writing the English language, have corrected-to-normal vision, not be color blind, and have normal hearing.</p>
+                    <p>During the experiment, you will 1) complete one or more attention, learning, decision-making, and/or memory tasks, and 2) answer a series of multiple-choice and/or open ended questions about your beliefs, attitudes, and behaviors in daily life. You will also be asked to fill out a demographic information form which includes information about ethnicity, race, gender, and age.</p><p></p>
+                    <p>See below for a brief description of the types of cognitive tasks you may be doing:</p>
+                    <p>1) One example of the type of task that will be employed is the ‘dot-motion task’ of perceptual decision making. On each trial, the participant sees an array of moving dots, some of which are moving at random, and some of which coherently move in a particular direction. The participant is asked to judge the direction in which the coherent set of dots are moving in.</p>
+                    <p>2) Another example is a standard recognition memory task. In this paradigm, a participant sees a list of words, and is later presented with another list. The participant has to judge whether the words in the second list appeared in the first.</p>
+                    <p>3) A third example is a standard decision-making task. Participants are presented with various possible outcomes and their probabilities in pictorial and/or text form and are asked to make the selection or series of selections that maximize reward.</p>
+                  <p><b>There may be a comprehension quiz following the task instructions and demo. Please pay attention to the instructions. If you do not pass this quiz, you will not be able to continue the task, and will not be compensated for the time spent reading the instructions and completing the demo.</b></p>
+                  <p><b>Note that while most participants in online studies make a good faith effort to engage with the task, unfortunately there are some participants who attempt to game the system. Submissions that do not meet a <i>minimum performance criterion</i> or are deemed fraudulent or not thoughtfully considered using other means may not be compensated.</b></p>
+                  </div>
+                <h1>Potential Risks and Discomforts</h1>
+                <hr />
+                <div class="legal well">
+                    <p><i>Questionnaires.</i>  The questionnaires may contain some sensitive questions that make you uncomfortable. The link between your identity and your responses will be strictly confidential. </p>
+                    <p>Some of the questionnaires ask about your experiences with anxiety, symptoms of obsessive-compulsive disorder, and depression. These questionnaires are not and cannot be used to make definitive diagnoses on an individual basis. Diagnoses may only be made by a trained mental health professional. Therefore, we cannot offer any assessment or advice based on your responses. <strong>However, if you are struggling with an issue related to mental health, you are not alone.</strong> If you are in an acute emergency situation and believe you may cause harm to yourself or others, the best course of action is to dial 911 or go directly to the nearest emergency room. If your situation is not acute, and you are a University of Maryland student who wishes to talk with someone, you can find help at the University of Maryland Counseling Center:</p>
+                <p><center>1101 Shoemaker Building</center>
+                   <center>4281 Chapel Lane</center>
+                   <center>College Park, MD 20742</center>
+                   <center>Main number: 301-314-7651 (After Hours Crisis Support: 301-314-7651)</center>
+                </p>
+                <p>If your situation is not acute and you are not affiliated with the university, the best course of action is to talk with your general practitioner (family doctor). They will be able to provide you with the appropriate resources, or make a referral to the appropriate specialist. </p>
+                <p><i>Breach of confidentiality.</i>  Although we take substantial precautions and follow best practices to safeguard all data collected, there is still a risk of a breach of confidentiality.</p>
+                </div>
+
+                <h1>Benefits</h1>
+                <hr />
+                <div class="legal well">
+                    The long term goal of this research program is to elucidate mechanisms in information processing that are affected in individuals with anxiety, obsessive compulsive disorder, depression, and other conditions. A better understanding of these disorders can inform treatment and potentially affect the millions of individuals that suffer annually. This research program provides no direct benefit to individual participants. None of the tests that we are conducting are intended to be clinically diagnostic in individual cases. No funds are available from the University of Maryland or its affiliates to compensate you for additional testing you might wish to pursue.
+                </div>
+
+                <h1>Confidentiality</h1>
+                <hr />
+                <div class="legal well">
+                    <p>The link between your identity and your responses will be strictly confidential. Identifying data (e.g. your name, e-mail address, Amazon Turk ID, and/or SONA ID) will be stored on a secure server hosted by the University of Maryland Division of Information Technology, in Qualtrics (a third party survey platform), and/or in SONA (a third party platform for managing experiments), and will be accessible only by the PI and other qualified research staff.</p>
+                    <p>Your behavioral responses in the tasks (except responses to open-ended questions) may be shared with research staff at other universities or made public. If shared, this information will be de-identified, that is, it will never include your name, e-mail address, or Amazon Turk ID.</p>
+                    <p>If we write a report or article about this research project, your identity will be protected to the maximum extent possible. Your information may be shared with representatives of the University of Maryland, College Park or governmental authorities if you or someone else is in danger or if we are required to do so by law.</p>
+                </div>
+
+                <h1>Right to Withdraw and Questions</h1>
+                <hr />
+                <div class="legal well">
+                    <p>Your participation in this research is completely voluntary. You may choose not to take part at all. If you decide to participate in this research, you may stop participating at any time. If you decide not to participate in this study or if you stop participating at any time, your grades, standing or employability at UMD will not be positively or negatively affected by your decision to not participate in the study.</p>
+                    <p>If you decide to stop taking part in the study, if you have questions, concerns, or complaints, or if you need to report an injury related to the research, please contact the investigator: </p>
+                    <p><center><b>Dr. Alec Solway</b></center>
+                       <center><b>Email:</b> <font color="blue">solwaylabexp@umd.edu</font></center>
+                    </p>
+                </div>
+
+                <h1>Participant Rights</h1>
+                <hr />
+                <div class="legal well">
+                    <p>If you have questions about your rights as a research participant or wish to report a research-related injury, please contact: </p>
+                        <p><center>University of Maryland College Park Institutional Review Board Office</center>
+                           <center>1204 Marie Mount Hall, College Park, Maryland, 20742</center>
+                           <center>E-mail: <font color="blue">irb@umd.edu</font> | Telephone: <font color="blue">301-405-0678</font></center>
+                        </p>
+                    <p>This research has been reviewed according to the University of Maryland, College Park IRB procedures for research involving human subjects.</p>
+                </div>
+
+                <h1>Statement of Consent</h1>
+                <hr />
+                <div class="legal well">
+                    <p>By clicking "I agree," you indicate that you are at least 18 years of age; you have read this consent form or have had it read to you; and you voluntarily agree to participate in this research study. You may print a copy of this consent form. </p>
+                    <p>If you agree to participate, please click "I agree" below.</p>
+
+
+                    <button type="button" class="btn btn-default btn-sm" onClick="window.print();">
+                    <span class="glyphicon glyphicon-print"></span> Print a copy of this
+                    </button>
+
+                    <button type="button" class="btn btn-primary btn-lg" onClick="window.location.assign(link_id)">
+                    <span class="glyphicon glyphicon-ok"></span> I agree
+                    </button>
+
+                    <button type="button" class="btn btn-danger btn-lg" onClick="window.location.assign(thank_id)">
+                    <span class="glyphicon glyphicon-ban-circle"></span> No thanks, I do not want to do this
+                    </button>
+
+                </div>
+                </form>
+
+            </div>
+        </div>
+    </body>
+</html>
